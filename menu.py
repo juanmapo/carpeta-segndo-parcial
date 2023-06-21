@@ -74,6 +74,7 @@ def main_menu(pantalla):
                     jugar()
 
                 if boton_rankings.revisar_input(pygame.mouse.get_pos()):
+                    musica_menu.stop()
                     puntuaciones(pantalla)
                     
         
@@ -168,7 +169,6 @@ def perdiste(score):
                     input.set_text("")
             
             if evento.type == pygame_gui.UI_TEXT_ENTRY_FINISHED and evento.ui_object_id == "#mani_text_entry":
-                crear_tabla_puntuaciones()
                 modificar_tabla_puntuaciones(input.get_text(),score)
                 puntuaciones(pantalla)
                 
@@ -182,8 +182,6 @@ def perdiste(score):
         manager.draw_ui(pantalla)
         
         pygame.display.flip()
-
-
 
 def jugar():
     alto_ventana = 720
