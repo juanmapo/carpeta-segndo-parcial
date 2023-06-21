@@ -10,3 +10,4 @@ pantalla = pygame.display.set_mode((ancho_ventana, alto_ventana))
 
 main_menu(pantalla)
 
+"pantalla"
