@@ -1,7 +1,5 @@
 import pygame
 
-
-
 class Nave_pj:
     def __init__(self,) -> None:
         self.vida = 3
